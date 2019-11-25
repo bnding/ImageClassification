@@ -54,43 +54,47 @@ def train(trainingData):
 
 # Solving for L(x)
 def predict(testingData, givenTrue, pyTrue, givenFalse, pyFalse):
-    pGivenTrue = []
-    pGivenFalse = []
     lx = []
     for data in testingData:
-        if(data[1] == 1):
-            for key in range(0, len(data[0])):
-                if(data[0][key] in givenTrue[key]):
-                    pGivenTrue.append(givenTrue[key].get(data[0][key]))
-            probability = pGivenTrue[0]
-            for x in range (1, len(pGivenTrue)):
-                probability *= pGivenTrue[x]
-            print(f"\n\ntrue probability: {probability}")
-            if(probability >= 1):
-                lx.append(1)
+        trueArr = []
+        falseArr = []
+        for key in range(0, len(data[0])):
+            if(data[0][key] in givenTrue[key]):
+                trueArr.append(givenTrue[key].get(data[0][key]))
             else:
-                lx.append(0)
+                trueArr.append(0.000000001)
 
+            if(data[0][key] in givenFalse[key]):
+                falseArr.append(givenFalse[key].get(data[0][key]))
+            else:
+                falseArr.append(0.000000001)
+        
+        
+        pGivenTrue = trueArr[0]
+        for x in range (1, len(trueArr)):
+            pGivenTrue *= trueArr[x]
+            print(f"\n\np(x|y=true): {pGivenTrue}")
 
+        pGivenFalse = falseArr[0]
+        for x in range (1, len(falseArr)):
+            pGivenFalse *= falseArr[x]
+            print(f"\n\np(x|y=false): {pGivenFalse}")
+        lxCalc = (pGivenTrue * pyTrue) / (pGivenFalse * pyFalse)
+        if(lxCalc >= 1):
+            lx.append(1)
         else:
-            for key in range(0, len(data[0])):
-                if(data[0][key] in givenFalse[key]):
-                    pGivenFalse.append(givenFalse[key].get(data[0][key]))
-            
-            probability = pGivenFalse[0]
-            for x in range (1, len(pGivenFalse)):
-                probability *= pGivenFalse[x]
-            print(f"\n\nfalse probability: {probability}")
-            if(probability >= 1):
-                lx.append(1)
-            else:
-                lx.append(0)
+            lx.append(0)
 
-    print(pGivenTrue)
-    return pGivenTrue, pGivenFalse, lx
+    return lx
+            
+
+            
+
 
 def main():
     trainingData=[([3,8,8,9], 1), ([2,4,6,4], 0), ([4,3,9,9], 1), ([3, 4, 5, 1], 0), ([2,8,1,9], 1)]
+
+    
     testingData = [([3,8,9,9], 1), ([2, 4, 6, 1], 0), ([4, 3, 9, 9], 1)]
 
     givenTrue, pyTrue, givenFalse, pyFalse = train(trainingData)
@@ -100,9 +104,9 @@ def main():
     print(f'givenFalse: {givenFalse}')
 
 
-    pGivenTrue, pGivenFalse, lx = predict(testingData, givenTrue, pyTrue, givenFalse, pyFalse,)
+    lx = predict(testingData, givenTrue, pyTrue, givenFalse, pyFalse,)
 
-    print(f"\n\n\npGivenTrue: {pGivenTrue}\npGivenFalse{pGivenFalse}\n\nlx: {lx}")
+    print(f"\n\n\nlx: {lx}")
 
 
 if __name__ == '__main__':
