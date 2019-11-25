@@ -4,38 +4,37 @@ def train(trainingData):
     countTrue = 0
     countFalse = 0
 
-    # Solving for p(x|y=true) and p(x|y=false)
     # Assigning frequencies of numbers into respective locations in array of dictionaries
-    for x in range(0, len(trainingData)):
+    for data in trainingData:
         # If image is true
-        if(trainingData[x][1] == 1):
+        if(data[1] == 1):
             countTrue += 1
 
             # new array
             if(len(givenTrue) == 0):
-                for section in range(0, len(trainingData[x][0])):
-                    givenTrue.append({trainingData[x][0][section]: 1})
+                for key in range(0, len(data[0])):
+                    givenTrue.append({data[0][key]: 1})
 
             # array already exists
             else:
-                for section in range(0, len(trainingData[x][0])):
-                    if(trainingData[x][0][section] in givenTrue[section]):
-                        givenTrue[section].update({trainingData[x][0][section]: givenTrue[section].get(trainingData[x][0][section]) + 1})
+                for key in range(0, len(data[0])):
+                    if(data[0][key] in givenTrue[key]):
+                        givenTrue[key].update({data[0][key]: givenTrue[key].get(data[0][key]) + 1})
                     else:
-                        givenTrue[section][trainingData[x][0][section]] = 1
+                        givenTrue[key][data[0][key]] = 1
                 
         # If image is false
         else:
             countFalse += 1
             if(len(givenFalse) == 0):
-                for x in trainingData[x][0]:
-                    givenFalse.append({x: 1})
+                for key in data[0]:
+                    givenFalse.append({key: 1})
             else:
-                for section in range(0, len(trainingData[x][0])):
-                    if(trainingData[x][0][section] in givenFalse[section]):
-                        givenFalse[section].update({trainingData[x][0][section]: givenFalse[section].get(trainingData[x][0][section]) + 1})
+                for key in range(0, len(data[0])):
+                    if(data[0][key] in givenFalse[key]):
+                        givenFalse[key].update({data[0][key]: givenFalse[key].get(data[0][key]) + 1})
                     else:
-                        givenFalse[section][trainingData[x][0][section]] = 1
+                        givenFalse[key][data[0][key]] = 1
 
     # Dividing frequency by count to get probability
     for x in range(0, len(givenTrue)):
@@ -51,23 +50,60 @@ def train(trainingData):
     pyTrue = countTrue / len(trainingData)
     pyFalse = countFalse / len(trainingData)
 
-
-    print(f"\nP(y=true): {pyTrue}")
-    print(f'givenTrue: {givenTrue}')
-
-    print()
-    print(f"\nP(y=false): {pyFalse}")
-    print(f'givenFalse: {givenFalse}')
-
     return givenTrue, pyTrue, givenFalse, pyFalse
 
+# Solving for L(x)
+def predict(testingData, givenTrue, pyTrue, givenFalse, pyFalse):
+    pGivenTrue = []
+    pGivenFalse = []
+    lx = []
+    for data in testingData:
+        if(data[1] == 1):
+            for key in range(0, len(data[0])):
+                if(data[0][key] in givenTrue[key]):
+                    pGivenTrue.append(givenTrue[key].get(data[0][key]))
+            probability = pGivenTrue[0]
+            for x in range (1, len(pGivenTrue)):
+                probability *= pGivenTrue[x]
+            print(f"\n\ntrue probability: {probability}")
+            if(probability >= 1):
+                lx.append(1)
+            else:
+                lx.append(0)
 
-def predict(givenTrue, pyTrue, givenFalse, pyFalse):
-    print("predict")
+
+        else:
+            for key in range(0, len(data[0])):
+                if(data[0][key] in givenFalse[key]):
+                    pGivenFalse.append(givenFalse[key].get(data[0][key]))
+            
+            probability = pGivenFalse[0]
+            for x in range (1, len(pGivenFalse)):
+                probability *= pGivenFalse[x]
+            print(f"\n\nfalse probability: {probability}")
+            if(probability >= 1):
+                lx.append(1)
+            else:
+                lx.append(0)
+
+    print(pGivenTrue)
+    return pGivenTrue, pGivenFalse, lx
 
 def main():
     trainingData=[([3,8,8,9], 1), ([2,4,6,4], 0), ([4,3,9,9], 1), ([3, 4, 5, 1], 0), ([2,8,1,9], 1)]
-    train(trainingData)
+    testingData = [([3,8,9,9], 1), ([2, 4, 6, 1], 0), ([4, 3, 9, 9], 1)]
+
+    givenTrue, pyTrue, givenFalse, pyFalse = train(trainingData)
+    print(f"\nP(y=true): {pyTrue}")
+    print(f'givenTrue: {givenTrue}')
+    print(f"\nP(y=false): {pyFalse}")
+    print(f'givenFalse: {givenFalse}')
+
+
+    pGivenTrue, pGivenFalse, lx = predict(testingData, givenTrue, pyTrue, givenFalse, pyFalse,)
+
+    print(f"\n\n\npGivenTrue: {pGivenTrue}\npGivenFalse{pGivenFalse}\n\nlx: {lx}")
+
 
 if __name__ == '__main__':
     main()
