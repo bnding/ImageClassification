@@ -111,15 +111,15 @@ def main():
     # 0.58 (train set=450), 0.81 (training set=5000)
     # 
     # runPerceptronFace(450,100)
-    # 0.71 (timeout=500) > 0.73 (timeout=50)
+    # 0.71 (timeout=500) > 0.73 (timeout=50) --> 0.82
     # 
     # runPerceptronDigit(450,100)
-    # 0.76
+    # 0.76 --> 0.8
     # 
     # runkNNFace(450,100)
     # 0.72
     # 
-    runkNNDigit(450,100)
+    # runkNNDigit(450,100)
     # 0.79
     # 
 

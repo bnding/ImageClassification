@@ -44,7 +44,9 @@ def makeTrainFunctionFace(trainFeatures,trainLabels):
     weights=[]
     #initialize all weights to be 0
     weights = [0.0001 for i in range(0,numOfFeatures+1)]
-    timeLimit=50
+
+    # 136 82
+    timeLimit=136
     update=0
     for iteration in range(0,timeLimit):
         for i in range(0,length):
@@ -85,7 +87,9 @@ def makeTrainFunctionDigits(trainFeatures,trainLabels):
     weights7 = [0.001 for i in range(0,numOfFeatures+1)]
     weights8 = [0.001 for i in range(0,numOfFeatures+1)]
     weights9 = [0.001 for i in range(0,numOfFeatures+1)]
-    timeLimit=200
+    # 171, 172, 180, 183 0.79
+    # 175 0.8
+    timeLimit=175
     #GET WEIGHTS FOR DIGIT 0
     update=0
     for iteration in range(0,timeLimit):
