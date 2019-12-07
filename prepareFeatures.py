@@ -107,7 +107,7 @@ def main():
     # runNBFace(450,100)
     # 0.88
     # 
-    # runNBDigit(450,100)
+    runNBDigit(450,100)
     # 0.58 (train set=450), 0.81 (training set=5000)
     # 
     # runPerceptronFace(450,100)
