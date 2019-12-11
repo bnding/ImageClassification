@@ -1,0 +1,77 @@
+===================================================================
+Perceptron face:
+-- classifier: Perceptron Algorithm
+-- image type: face
+-------------------------------------------------------------------
+TRAINING SIZE: 10%
+  Trial 0: accuracy=0.68, error=0.32, training time (seconds)=0.004
+  Trial 1: accuracy=0.8, error=0.2, training time (seconds)=0.011
+  Trial 2: accuracy=0.7, error=0.3, training time (seconds)=0.013
+  Trial 3: accuracy=0.72, error=0.28, training time (seconds)=0.007
+  Trial 4: accuracy=0.67, error=0.33, training time (seconds)=0.02
+  ** SUMMARY: MEAN ACCURACY=0.71, STANDARD DEVIATION=0.05, MEAN ERROR=0.29, AVERAGE TRAINING TIME (SECONDS)=0.011
+TRAINING SIZE: 20%
+  Trial 0: accuracy=0.69, error=0.31, training time (seconds)=0.113
+  Trial 1: accuracy=0.68, error=0.32, training time (seconds)=0.084
+  Trial 2: accuracy=0.63, error=0.37, training time (seconds)=0.113
+  Trial 3: accuracy=0.8, error=0.2, training time (seconds)=0.109
+  Trial 4: accuracy=0.73, error=0.27, training time (seconds)=0.052
+  ** SUMMARY: MEAN ACCURACY=0.71, STANDARD DEVIATION=0.06, MEAN ERROR=0.29, AVERAGE TRAINING TIME (SECONDS)=0.094
+TRAINING SIZE: 30%
+  Trial 0: accuracy=0.67, error=0.33, training time (seconds)=0.181
+  Trial 1: accuracy=0.76, error=0.24, training time (seconds)=0.178
+  Trial 2: accuracy=0.71, error=0.29, training time (seconds)=0.169
+  Trial 3: accuracy=0.75, error=0.25, training time (seconds)=0.178
+  Trial 4: accuracy=0.68, error=0.32, training time (seconds)=0.181
+  ** SUMMARY: MEAN ACCURACY=0.71, STANDARD DEVIATION=0.04, MEAN ERROR=0.29, AVERAGE TRAINING TIME (SECONDS)=0.177
+TRAINING SIZE: 40%
+  Trial 0: accuracy=0.79, error=0.21, training time (seconds)=0.218
+  Trial 1: accuracy=0.73, error=0.27, training time (seconds)=0.226
+  Trial 2: accuracy=0.72, error=0.28, training time (seconds)=0.238
+  Trial 3: accuracy=0.8, error=0.2, training time (seconds)=0.242
+  Trial 4: accuracy=0.77, error=0.23, training time (seconds)=0.24
+  ** SUMMARY: MEAN ACCURACY=0.76, STANDARD DEVIATION=0.03, MEAN ERROR=0.24, AVERAGE TRAINING TIME (SECONDS)=0.233
+TRAINING SIZE: 50%
+  Trial 0: accuracy=0.65, error=0.35, training time (seconds)=0.322
+  Trial 1: accuracy=0.75, error=0.25, training time (seconds)=0.298
+  Trial 2: accuracy=0.75, error=0.25, training time (seconds)=0.301
+  Trial 3: accuracy=0.76, error=0.24, training time (seconds)=0.296
+  Trial 4: accuracy=0.72, error=0.28, training time (seconds)=0.31
+  ** SUMMARY: MEAN ACCURACY=0.73, STANDARD DEVIATION=0.04, MEAN ERROR=0.27, AVERAGE TRAINING TIME (SECONDS)=0.305
+TRAINING SIZE: 60%
+  Trial 0: accuracy=0.74, error=0.26, training time (seconds)=0.363
+  Trial 1: accuracy=0.77, error=0.23, training time (seconds)=0.366
+  Trial 2: accuracy=0.71, error=0.29, training time (seconds)=0.358
+  Trial 3: accuracy=0.73, error=0.27, training time (seconds)=0.364
+  Trial 4: accuracy=0.75, error=0.25, training time (seconds)=0.361
+  ** SUMMARY: MEAN ACCURACY=0.74, STANDARD DEVIATION=0.02, MEAN ERROR=0.26, AVERAGE TRAINING TIME (SECONDS)=0.362
+TRAINING SIZE: 70%
+  Trial 0: accuracy=0.75, error=0.25, training time (seconds)=0.437
+  Trial 1: accuracy=0.77, error=0.23, training time (seconds)=0.448
+  Trial 2: accuracy=0.77, error=0.23, training time (seconds)=0.427
+  Trial 3: accuracy=0.8, error=0.2, training time (seconds)=0.429
+  Trial 4: accuracy=0.74, error=0.26, training time (seconds)=0.433
+  ** SUMMARY: MEAN ACCURACY=0.77, STANDARD DEVIATION=0.02, MEAN ERROR=0.23, AVERAGE TRAINING TIME (SECONDS)=0.435
+TRAINING SIZE: 80%
+  Trial 0: accuracy=0.77, error=0.23, training time (seconds)=0.496
+  Trial 1: accuracy=0.74, error=0.26, training time (seconds)=0.493
+  Trial 2: accuracy=0.7, error=0.3, training time (seconds)=0.499
+  Trial 3: accuracy=0.72, error=0.28, training time (seconds)=0.496
+  Trial 4: accuracy=0.71, error=0.29, training time (seconds)=0.49
+  ** SUMMARY: MEAN ACCURACY=0.73, STANDARD DEVIATION=0.02, MEAN ERROR=0.27, AVERAGE TRAINING TIME (SECONDS)=0.495
+TRAINING SIZE: 90%
+  Trial 0: accuracy=0.76, error=0.24, training time (seconds)=0.562
+  Trial 1: accuracy=0.71, error=0.29, training time (seconds)=0.56
+  Trial 2: accuracy=0.75, error=0.25, training time (seconds)=0.552
+  Trial 3: accuracy=0.77, error=0.23, training time (seconds)=0.57
+  Trial 4: accuracy=0.78, error=0.22, training time (seconds)=0.558
+  ** SUMMARY: MEAN ACCURACY=0.75, STANDARD DEVIATION=0.02, MEAN ERROR=0.25, AVERAGE TRAINING TIME (SECONDS)=0.56
+TRAINING SIZE: 100%
+  Trial 0: accuracy=0.81, error=0.19, training time (seconds)=0.63
+  Trial 1: accuracy=0.78, error=0.22, training time (seconds)=0.628
+  Trial 2: accuracy=0.78, error=0.22, training time (seconds)=0.627
+  Trial 3: accuracy=0.76, error=0.24, training time (seconds)=0.629
+  Trial 4: accuracy=0.79, error=0.21, training time (seconds)=0.629
+  ** SUMMARY: MEAN ACCURACY=0.78, STANDARD DEVIATION=0.02, MEAN ERROR=0.22, AVERAGE TRAINING TIME (SECONDS)=0.629
+===================================================================
+ 

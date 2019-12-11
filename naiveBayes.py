@@ -296,28 +296,3 @@ def predictDigit(testFeatures,testLabels, given0True, given1True,given2True,give
         predict.append(digit)
         lxCalc=[]
     return predict
-            
-
-            
-
-
-#def main():
-#    trainingData=[([3,8,8,9], 1), ([2,4,6,4], 0), ([4,3,9,9], 1), ([3, 4, 5, 1], 0), ([2,8,1,9], 1)]
-#
-#    
-#    testingData = [([3,8,9,9], 1), ([2, 4, 6, 1], 0), ([4, 3, 9, 9], 1)]
-#
-#    givenTrue, pyTrue, givenFalse, pyFalse = trainFace(trainingData)
-#    print(f"\nP(y=true): {pyTrue}")
-#    print(f'givenTrue: {givenTrue}')
-#    print(f"\nP(y=false): {pyFalse}")
-#    print(f'givenFalse: {givenFalse}')
-#
-#
-#    lx = predictFace(testingData, givenTrue, pyTrue, givenFalse, pyFalse,)
-#
-#    print(f"\n\n\nlx: {lx}")
-#
-#
-#if __name__ == '__main__':
-#    main()

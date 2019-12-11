@@ -1,0 +1,77 @@
+===================================================================
+kNN digit
+-- classifier: kNN
+-- image type: digit
+-------------------------------------------------------------------
+TRAINING SIZE: 10%
+  Trial 0: accuracy=0.77, error=0.23, prediction time per image (seconds)=0.009
+  Trial 1: accuracy=0.77, error=0.23, prediction time per image (seconds)=0.009
+  Trial 2: accuracy=0.77, error=0.23, prediction time per image (seconds)=0.009
+  Trial 3: accuracy=0.78, error=0.22, prediction time per image (seconds)=0.009
+  Trial 4: accuracy=0.82, error=0.18, prediction time per image (seconds)=0.009
+  ** SUMMARY: MEAN ACCURACY=0.78, STANDARD DEVIATION=0.02, MEAN ERROR=0.22, AVERAGE PREDICTION TIME PER IMAGE (SECONDS)=0.009
+TRAINING SIZE: 20%
+  Trial 0: accuracy=0.83, error=0.17, prediction time per image (seconds)=0.018
+  Trial 1: accuracy=0.85, error=0.15, prediction time per image (seconds)=0.018
+  Trial 2: accuracy=0.82, error=0.18, prediction time per image (seconds)=0.018
+  Trial 3: accuracy=0.79, error=0.21, prediction time per image (seconds)=0.018
+  Trial 4: accuracy=0.84, error=0.16, prediction time per image (seconds)=0.018
+  ** SUMMARY: MEAN ACCURACY=0.83, STANDARD DEVIATION=0.02, MEAN ERROR=0.17, AVERAGE PREDICTION TIME PER IMAGE (SECONDS)=0.018
+TRAINING SIZE: 30%
+  Trial 0: accuracy=0.85, error=0.15, prediction time per image (seconds)=0.027
+  Trial 1: accuracy=0.87, error=0.13, prediction time per image (seconds)=0.027
+  Trial 2: accuracy=0.86, error=0.14, prediction time per image (seconds)=0.027
+  Trial 3: accuracy=0.88, error=0.12, prediction time per image (seconds)=0.027
+  Trial 4: accuracy=0.85, error=0.15, prediction time per image (seconds)=0.027
+  ** SUMMARY: MEAN ACCURACY=0.86, STANDARD DEVIATION=0.01, MEAN ERROR=0.14, AVERAGE PREDICTION TIME PER IMAGE (SECONDS)=0.027
+TRAINING SIZE: 40%
+  Trial 0: accuracy=0.83, error=0.17, prediction time per image (seconds)=0.036
+  Trial 1: accuracy=0.89, error=0.11, prediction time per image (seconds)=0.036
+  Trial 2: accuracy=0.91, error=0.09, prediction time per image (seconds)=0.036
+  Trial 3: accuracy=0.89, error=0.11, prediction time per image (seconds)=0.036
+  Trial 4: accuracy=0.84, error=0.16, prediction time per image (seconds)=0.036
+  ** SUMMARY: MEAN ACCURACY=0.87, STANDARD DEVIATION=0.03, MEAN ERROR=0.13, AVERAGE PREDICTION TIME PER IMAGE (SECONDS)=0.036
+TRAINING SIZE: 50%
+  Trial 0: accuracy=0.85, error=0.15, prediction time per image (seconds)=0.045
+  Trial 1: accuracy=0.88, error=0.12, prediction time per image (seconds)=0.045
+  Trial 2: accuracy=0.87, error=0.13, prediction time per image (seconds)=0.046
+  Trial 3: accuracy=0.86, error=0.14, prediction time per image (seconds)=0.045
+  Trial 4: accuracy=0.85, error=0.15, prediction time per image (seconds)=0.045
+  ** SUMMARY: MEAN ACCURACY=0.86, STANDARD DEVIATION=0.01, MEAN ERROR=0.14, AVERAGE PREDICTION TIME PER IMAGE (SECONDS)=0.045
+TRAINING SIZE: 60%
+  Trial 0: accuracy=0.87, error=0.13, prediction time per image (seconds)=0.054
+  Trial 1: accuracy=0.89, error=0.11, prediction time per image (seconds)=0.054
+  Trial 2: accuracy=0.86, error=0.14, prediction time per image (seconds)=0.055
+  Trial 3: accuracy=0.86, error=0.14, prediction time per image (seconds)=0.054
+  Trial 4: accuracy=0.86, error=0.14, prediction time per image (seconds)=0.054
+  ** SUMMARY: MEAN ACCURACY=0.87, STANDARD DEVIATION=0.01, MEAN ERROR=0.13, AVERAGE PREDICTION TIME PER IMAGE (SECONDS)=0.054
+TRAINING SIZE: 70%
+  Trial 0: accuracy=0.9, error=0.1, prediction time per image (seconds)=0.066
+  Trial 1: accuracy=0.87, error=0.13, prediction time per image (seconds)=0.063
+  Trial 2: accuracy=0.84, error=0.16, prediction time per image (seconds)=0.063
+  Trial 3: accuracy=0.89, error=0.11, prediction time per image (seconds)=0.063
+  Trial 4: accuracy=0.86, error=0.14, prediction time per image (seconds)=0.063
+  ** SUMMARY: MEAN ACCURACY=0.87, STANDARD DEVIATION=0.02, MEAN ERROR=0.13, AVERAGE PREDICTION TIME PER IMAGE (SECONDS)=0.064
+TRAINING SIZE: 80%
+  Trial 0: accuracy=0.88, error=0.12, prediction time per image (seconds)=0.072
+  Trial 1: accuracy=0.88, error=0.12, prediction time per image (seconds)=0.073
+  Trial 2: accuracy=0.86, error=0.14, prediction time per image (seconds)=0.072
+  Trial 3: accuracy=0.87, error=0.13, prediction time per image (seconds)=0.072
+  Trial 4: accuracy=0.88, error=0.12, prediction time per image (seconds)=0.074
+  ** SUMMARY: MEAN ACCURACY=0.87, STANDARD DEVIATION=0.01, MEAN ERROR=0.13, AVERAGE PREDICTION TIME PER IMAGE (SECONDS)=0.073
+TRAINING SIZE: 90%
+  Trial 0: accuracy=0.88, error=0.12, prediction time per image (seconds)=0.082
+  Trial 1: accuracy=0.87, error=0.13, prediction time per image (seconds)=0.082
+  Trial 2: accuracy=0.87, error=0.13, prediction time per image (seconds)=0.083
+  Trial 3: accuracy=0.88, error=0.12, prediction time per image (seconds)=0.082
+  Trial 4: accuracy=0.87, error=0.13, prediction time per image (seconds)=0.082
+  ** SUMMARY: MEAN ACCURACY=0.87, STANDARD DEVIATION=0.0, MEAN ERROR=0.13, AVERAGE PREDICTION TIME PER IMAGE (SECONDS)=0.082
+TRAINING SIZE: 100%
+  Trial 0: accuracy=0.88, error=0.12, prediction time per image (seconds)=0.091
+  Trial 1: accuracy=0.88, error=0.12, prediction time per image (seconds)=0.094
+  Trial 2: accuracy=0.88, error=0.12, prediction time per image (seconds)=0.092
+  Trial 3: accuracy=0.88, error=0.12, prediction time per image (seconds)=0.092
+  Trial 4: accuracy=0.88, error=0.12, prediction time per image (seconds)=0.092
+  ** SUMMARY: MEAN ACCURACY=0.88, STANDARD DEVIATION=0.0, MEAN ERROR=0.12, AVERAGE PREDICTION TIME PER IMAGE (SECONDS)=0.092
+===================================================================
+ 
